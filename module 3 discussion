@@ -1,3 +1,16 @@
+class Program
+{
+    static void Main()
+    {
+        object rectObject = new Rectangle(5.0, 3.0);
+
+        Rectangle rect = (Rectangle)rectObject;
+
+        // Display the rectangle's details
+        Console.WriteLine(rect.ToString());
+    }
+}
+
 using system
 public class Rectangle
 {
@@ -15,9 +28,3 @@ public class Rectangle
     height = Height;
   }
 }
-Object Initializers
-  
-  Bunny b1 = new Bunny { Name="Bo", LikesCarrots=true, LikesHumans=false };
-  Bunny b2 = new Bunny ("Bo")     { LikesCarrots=true, LikesHumans=false };
-  
-  b1.Dump(); b2.Dump();
