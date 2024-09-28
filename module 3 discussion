@@ -6,7 +6,7 @@ class Program
 
         Rectangle rect = (Rectangle)rectObject;
 
-        // Display the rectangle's details
+        // Display the rectangle's width and height
         Console.WriteLine(rect.ToString());
     }
 }
