@@ -1,0 +1,32 @@
+using System;
+namespace DivisionApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the first number:");
+            string input1 = Console.ReadLine();
+
+            Console.WriteLine("Enter the second number:");
+            string input2 = Console.ReadLine();
+            PerformDivision(input1, input2);   }
+        static void PerformDivision(string num1, string num2)   {
+            try  {
+                int number1 = int.Parse(num1);  // Convert strings to integers
+                int number2 = int.Parse(num2);
+
+                // Division
+                int result = number1 / number2;
+                Console.WriteLine($"The result of dividing {number1} by {number2} is: {result}");   // Print 
+            }
+            catch (FormatException) {
+                Console.WriteLine("Error: One or both inputs are not valid integers.");
+            }
+            catch (DivideByZeroException)   {
+                Console.WriteLine("Error: Division by zero is not allowed.");
+            }
+            catch (Exception ex)  {
+                // to catch exceptions
+                Console.WriteLine($"An unexpected error occurred: {ex.Message}");
+            }}}}
